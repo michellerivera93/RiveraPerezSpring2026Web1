@@ -1,0 +1,60 @@
+body{
+    background-color: #d5e9f9;
+    font-family:Arial, Helvetica, sans-serif, Times, serif,
+}
+
+
+/* id selector */
+#wrapper {
+    background-color: #ffffff; 
+    width: 70%;
+    margin: 0px auto;
+    /* top and bottom are no margin, left and right are automatically equal */
+}
+
+h3,h4,h5{
+    margin:0px
+}
+
+h1{
+    color:rgb(45, 21, 183);
+    font-family:"Jacquard 12 Charted", system-ui;
+    font-size: 35px;
+}
+
+header h2{
+    color:#4551d6;
+    font-family:  "Manufacturing Consent", system-ui;
+    font-size: 50px;
+    
+}
+
+  
+
+main h2{
+    color: #0d27a8;
+}
+
+main h3{
+    margin-top:30px
+}
+
+main h4{
+    font-size: 12 px;
+}
+
+main a{
+    color: #7082de;
+    text-decoration: none;
+}
+main a:hover{
+    color: #12197a;
+}
+
+span.copyright{
+    color: #1b08c0;
+}
+
+span.author{
+    color: #0000FF;
+}
