@@ -1,0 +1,46 @@
+body {
+    background-color: #B07DAB;
+
+}
+
+#wrapper {
+    background-color: #DAFCCC;
+    width: 70%;
+    margin: 0px auto;
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 20px;
+    border: 2px solid #7EB06B;
+}
+
+main h2 {
+    background-color: #ebb9ed;
+    padding: 6px;
+    border-bottom: 10px solid #6b2e59;
+    margin: 60px, 0px, 0px, 0px;
+}
+h1,h2,h3{
+    color: #441f38;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+div.imageContainer {
+    background-color: #fde3fe;     
+    padding: 20px;
+    border: 11px solid #9c729a;
+    
+}
+
+/* styling a img inline element box */
+div.imageContainer img {
+    width:fit-content;
+    height: 200px;
+    border: 11px solid #6b2e59;
+    margin: 22px;
+    padding: 40px;
+    background-color: #FFE8FD;
+    background-image: url(images/background.jpg);
+}
