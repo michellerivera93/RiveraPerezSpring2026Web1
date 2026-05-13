@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Michelle Rivera Perez: Final Project Proposal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inconsolata:wght@200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>final project proposal</h1>
+    <h3>michelle rivera perez</h3>
+
+    <div id="container">
+
+        <div class="box">
+            <div class="flip">theme</div>
+            <div class="panel">new york city adventure! the user will navigate the streets of new york city, interacting
+                with different objects along the way</div>
+        </div>
+
+        <div class="box">
+            <div class="flip"> description- what will the contents of your website be</div>
+            <div class="panel">i would like to make my project resemble a video game and possibly take inspiration from
+                the "different layers of the sea" project where the user nagivates through different layers/links. In
+                this case, the user would navigate through the different "layers" of nyc, starting above ground and then
+                going underground</div>
+        </div>
+
+        <div class="box">
+            <div class="flip">what style of fonts will you look for?</div>
+            <div class="panel">there is a large contrast between different parts of nyc. To show this, I will probably
+                include some kind of graffiti font and a "fancier" font on a different page</div>
+        </div>
+
+        <div class="box">
+            <div class="flip">what colors are you considering and why?</div>
+            <div class="panel">to emphasize the constrast between different parts of nyc, i will use darker, cool toned
+                colors for underground areas and brighter colors when the background is above ground.</div>
+        </div>
+
+        <div class="box">
+            <div class="flip">what will your javascript element be?</div>
+            <div class="panel">drag and drop- since i want to make my project resemble an interactive game, i was
+                thinking of using the drag and drop demo from our previous class to have the user dress up their
+                character. </div>
+        </div>
+
+        <div class="box">
+            <div class="flip">what will your p5 element be? Will it be animated? interactive?</div>
+            <div class="panel">sketch with music? i would like to include a page where the user enters a concert or club
+                and would like to utilize the sound library from p5js </div>
+        </div>
+
+        <div class="box">
+            <div class="flip">What will your jquery element be?</div>
+            <div class="panel">selector tool- whenever the user swipes their metrocard, the border will turn red</div>
+        </div>
+
+        <div id="images">
+            <div id="buttons">
+                <button id="reveal-palette">reveal color palette</button>
+                <button id="reveal-inspo">reveal inspo</button>
+            </div>
+            <div id="palette">
+                <img src="palette.jpg" alt="color palette">
+            </div>
+            <div id="inspo">
+                <img src="inspo.jpg" alt="inspo image">
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            $(".flip").on("click", function () {
+                $(this).siblings(".panel").slideToggle();
+            });
+
+            $("#reveal-palette").on("click", function () {
+                $("#palette").fadeIn("normal");
+            });
+
+            $("#reveal-inspo").on("click", function () {
+                $("#inspo").fadeIn("normal");
+            });
+
+        });
+
+    </script>
+
+    <footer> &copy 2026 Michelle Rivera Perez </footer>
+</body>
+
+</html>
