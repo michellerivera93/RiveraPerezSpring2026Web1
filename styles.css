@@ -1,0 +1,512 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    color: white;
+    font-family: "Space Mono", monospace;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #fccc0a;
+}
+
+.subtitle {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+header {
+    text-align: center;
+    : #121212;
+    padding: 15px;
+}
+
+
+.subway-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.subway-nav a {
+    color: white;
+    background-color: #222222;
+    text-decoration: none;
+    padding: 12px 18px;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.subway-nav a:hover {
+    background-color: #fccc0a;
+    color: #111111;
+}
+
+.subway-nav .active {
+    background-color: #fccc0a;
+    color: #111111;
+}
+
+
+
+
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    min-height: 550px;
+    align-items: center;
+}
+
+
+.sticker {
+    text-align: center;
+}
+
+
+.sticker img {
+    width: 100%;
+    max-width: 230px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.sticker:hover img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px #fccc0a);
+}
+
+
+.deli img {
+    max-width: 400px;
+}
+
+.train img {
+    max-width: 300px;
+}
+
+.subway img {
+    background-color max-width: 400px;
+}
+
+.pigeon img {
+    max-width: 300px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+}
+
+
+
+/* Pigeon page */
+
+.pigeon-page {
+    color: white;
+    padding: 40px;
+}
+
+.pigeon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border: 3px solid white;
+    padding: 30px;
+}
+
+.pigeon-info {
+    width: 50%;
+}
+
+.pigeon-info h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: #fccc0a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.pigeon-info p {
+    font-size: 15px;
+}
+
+.pigeon-image-area {
+    width: 40%;
+    text-align: center;
+}
+
+.moving-pigeon {
+    width: 260px;
+    animation-name: pigeon-bob;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.pigeon-shadow {
+    width: 130px;
+    height: 18px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.5;
+    animation-name: shadow-change;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+
+.street-animation {
+    margin-top: 30px;
+    height: 100px;
+    border: 3px solid white;
+    background-image: linear-gradient(90deg, #323232 50%, #555454 50%);
+    background-size: 120px 100px;
+    animation-name: sidewalk-scroll;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+@keyframes pigeon-bob {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shadow-change {
+    0% {
+        width: 130px;
+    }
+
+    50% {
+        width: 90px;
+    }
+
+    100% {
+        width: 130px;
+    }
+}
+
+@keyframes sidewalk-scroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 120px 0;
+    }
+}
+
+
+/* Deli page */
+
+#deli-page {
+    background-color: #000000;
+    color: white;
+    min-height: 700px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.deli-section {
+    width: 22%;
+    background-color: #232323;
+    border: 3px solid white;
+    padding: 15px;
+    text-align: center;
+}
+
+.deli-section h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 38px;
+    color: #fccc0a;
+    margin-top: 0;
+}
+
+
+#shelf-section {
+    background-color: #4a2c1a;
+}
+
+
+#fridge-section {
+    background-color: #1d3557;
+}
+
+
+.item-holder {
+    height: 95px;
+    position: relative;
+    border-bottom: 2px solid white;
+    margin-bottom: 8px;
+}
+
+
+.item {
+    position: absolute;
+    max-width: 90px;
+    max-height: 90px;
+    left: 50px;
+    cursor: grab;
+}
+
+.item:hover {
+    filter: drop-shadow(0 0 12px #fccc0a);
+}
+
+
+#bag-section {
+    width: 48%;
+    text-align: center;
+    background-color: #232323;
+    border: 3px solid white;
+    padding: 20px;
+}
+
+#bag-section h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 55px;
+    color: #fccc0a;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.directions {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+#bag {
+    width: 330px;
+    margin-top: 10px;
+    filter: drop-shadow(0 0 10px white);
+}
+
+
+#cat-area {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#cat {
+    width: 150px;
+    cursor: pointer;
+}
+
+#cat:hover {
+    filter: drop-shadow(0 0 12px #fccc0a);
+}
+
+
+
+#speech-box {
+    display: none;
+    position: relative;
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -25px;
+}
+
+#speech {
+    width: 100%;
+    display: block;
+}
+
+#cat-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #111111;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+/* Subway page */
+
+#subway-page {
+    padding: 30px;
+}
+
+#turnstile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background-color: #232323;
+    border: 3px solid white;
+    padding: 35px;
+}
+
+#turnstile {
+    width: 260px;
+    height: 360px;
+    background-color: #555555;
+    border: 4px solid white;
+    text-align: center;
+    padding: 20px;
+}
+
+#screen {
+    color: #fccc0a;
+    border: 3px solid white;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+#slot {
+    width: 180px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 2px solid white;
+}
+
+#turnstile-bars {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bar {
+    width: 25px;
+    height: 170px;
+    background-color: #bcbbbb;
+    border: 2px solid white;
+}
+
+#card-section {
+    text-align: center;
+    width: 330px;
+}
+
+#metrocard {
+    width: 260px;
+    cursor: pointer;
+    position: relative;
+}
+
+#metrocard:hover {
+    filter: drop-shadow(0 0 15px #fccc0a);
+}
+
+#add-fare {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 18px;
+    background-color: #fccc0a;
+    color: #111111;
+    border: 2px solid white;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#add-fare:hover {
+    background-color: white;
+}
+
+#directions {
+    font-size: 14px;
+}
+
+.open-bar {
+    transform: rotate(25deg);
+}
+
+#metrocard-info {
+    background-color: #232323;
+    border: 3px solid white;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+#metrocard-info h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 45px;
+    color: #fccc0a;
+    margin-top: 0;
+}
+
+#metrocard-info p {
+    font-size: 15px;
+}
+
+
+/* Train page */
+
+#platform-page {
+    padding: 30px;
+}
+
+#platform-info {
+    background-color: #232323;
+    border: 3px solid white;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+#platform-info h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    color: #fccc0a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#platform-info p {
+    font-size: 15px;
+}
+
+.source-note {
+    color: #fccc0a;
+    font-weight: bold;
+}
+
+#sketch-section {
+    background-color: #232323;
+    border: 3px solid white;
+    padding: 25px;
+    text-align: center;
+}
+
+#p5-container {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Layer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Stop #3: Subway Turnstile</h1>
+        <p class="subtitle">Swipe the MetroCard to enter the subway.</p>
+
+        <nav class="subway-nav">
+            <a href="index.html">Home</a>
+            <a href="pigeon.html">Street</a>
+            <a href="deli.html">Deli</a>
+            <a href="subway.html" class="active">Subway</a>
+            <a href="train.html">Train</a>
+        </nav>
+    </header>
+
+    <main id="subway-page">
+
+        <section id="turnstile-section">
+
+            <div id="turnstile">
+                <div id="screen">
+                    <p id="screen-text">SWIPE CARD</p>
+                </div>
+
+                <div id="slot"></div>
+
+                <div id="turnstile-bars">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+            </div>
+
+            <div id="card-section">
+                <img id="metrocard" src="images/metrocard.png" alt="MetroCard">
+
+                <button id="add-fare">Add Fare</button>
+
+                <p id="directions">
+                    Click the MetroCard to swipe. If there is not enough money, add more and click MetroCard again.
+                </p>
+            </div>
+
+        </section>
+
+        <section id="metrocard-info">
+            <h2>About the MetroCard</h2>
+
+            <p>
+                The MetroCard was New York City's swipe fare card for decades. It is now
+                being replaced by OMNY, the MTA's contactless tap-and-go payment system.
+            </p>
+
+            <p>
+                The MTA announced that MetroCard sales and distribution would end on
+                December 31, 2025. MetroCards will still be accepted into 2026, and the
+                exact final acceptance date will be announced later.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p> &copy; 2026 Michelle Rivera Perez</p>
+        <p>
+            <a href="https://www.mta.info/press-release/mta-sunset-metrocard-sales-end-of-year" target="_blank">MTA</a>
+            <a href="https://en.wikipedia.org/wiki/MetroCard" target="_blank">MetroCard</a>
+        </p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#metrocard").click(function () {
+
+                $("#metrocard").animate({ left: "-120px" }, 600);
+                $("#metrocard").animate({ left: "0px" }, 600);
+
+                if ($("#metrocard").hasClass("paid")) {
+                    $("#screen-text").text("GO");
+                    $("#screen").css("background-color", "#007a3d");
+                    $("#screen").css("color", "white");
+
+                    $(".bar").addClass("open-bar");
+                } else {
+                    $("#screen-text").text("INSUFFICIENT FARE");
+                    $("#screen").css("background-color", "#9b2226");
+                    $("#screen").css("color", "white");
+
+                    $("#screen").animate({ marginLeft: "10px" }, 100);
+                    $("#screen").animate({ marginLeft: "-10px" }, 100);
+                    $("#screen").animate({ marginLeft: "0px" }, 100);
+                }
+
+            });
+
+            $("#add-fare").click(function () {
+                $("#metrocard").addClass("paid");
+
+                $("#screen-text").text("FARE ADDED. SWIPE AGAIN.");
+                $("#screen").css("background-color", "#fccc0a");
+                $("#screen").css("color", "#111111");
+
+                $("#add-fare").fadeOut(500);
+            });
+
+        });
+
+
+    </script>
+</body>
+
+</html>
