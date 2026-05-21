@@ -1,0 +1,157 @@
+/* BEGIN border-box fix */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* END border-box fix */
+
+body {
+    padding: 0;
+    /* you want to define padding and margin for more control instead of defeault browser settings */
+    margin: 0;
+    background-color: rgb(206, 209, 210);
+
+}
+
+/* Grouping example */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: "Jersey 25", sans-serif;
+    font-size: 20px;
+    color: #fff8f0;
+    margin: 0;
+}
+
+
+h2 {
+    font-family: "Jersey 25", sans-serif;
+    font-size: 40px;
+    color: #c5e7ff;
+    margin-top: 0;
+}
+
+h3{
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300px;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      color:beige
+
+}
+
+h4,h5,p{
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50px;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      color:#ffffff
+}
+
+li{
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #7be6f9;
+}
+
+
+/* GRID LAYOUT */
+
+.wrapper {
+    background: rgb(187, 215, 153);
+    /* grid layout parent */
+    display: grid;
+    /* create 12 col layout */
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 6px 6px 0px #1f1f1f;
+}
+
+/* padding on immediate children of wrapper */
+.wrapper>*{
+    padding: 20px;
+    border: 1px solid #c9c3bc;
+}
+
+header {
+    background-color: rgb(55, 13, 181);
+    grid-column: 1/13;
+    color:ghostwhite
+}
+
+nav {
+    background-color: rgb(9, 3, 103);
+    grid-column: 1/4;
+    color: ghostwhite;
+
+}
+
+main {
+    background-color: rgb(51, 111, 207);
+    grid-column: 4/10;
+
+}
+
+aside {
+    background-color: rgb(151, 115, 187);
+    grid-column: 10/13;
+
+}
+
+img{
+    width: 230px;
+    height: 200px;
+}
+
+.bio{
+    width: 400px;
+    height: 210px;
+}
+
+/* span 2 rows */
+main,
+nav,
+aside {
+  grid-row: 2 / 4;
+}
+
+footer {
+    background-color: rgb(109, 107, 107);
+    grid-column: 1/13;
+}
+
+footer h2{
+    font-size: 20px;
+    text-align: center;
+    color: white
+}
